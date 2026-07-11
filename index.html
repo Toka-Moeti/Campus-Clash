@@ -1,185 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Campus Clash — Culture, community, competition, and campus events."
-  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Campus Clash: student culture, events, competitions, and community."
+    />
+    <meta name="theme-color" content="#0a0a0c" />
 
-  <title>Campus Clash</title>
+    <title>Campus Clash | Student Events</title>
 
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
 
-<body>
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Campus Clash home">
-        <span class="brand-mark">CC</span>
-        <span>Campus Clash</span>
-      </a>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#events">Events</a>
-        <a class="nav-button" href="#join">Join the Clash</a>
-      </nav>
-    </div>
-  </header>
+    <header class="site-header" id="home">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Campus Clash home">
+          <span class="brand-mark" aria-hidden="true">CC</span>
+          <span>Campus Clash</span>
+        </a>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">Culture Movement</p>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-          <h1>
-            Own the
-            <span>Campus.</span>
-          </h1>
+        <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+          <a href="#events">Events</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#saved">Saved</a>
+          <a class="nav-button" href="#create-event">Create an event</a>
+        </nav>
+      </div>
+    </header>
 
-          <p class="hero-copy">
-            Campus Clash brings students together through culture, competition,
-            creativity, and unforgettable community experiences.
-          </p>
+    <main id="main-content">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Student culture · competition · community</p>
 
-          <div class="hero-actions">
-            <a class="button button-primary" href="#join">Join the movement</a>
-            <a class="button button-secondary" href="#about">Explore Campus Clash</a>
+            <h1>
+              Find your
+              <span>campus moment.</span>
+            </h1>
+
+            <p class="hero-copy">
+              Discover events, compete with your faculty, support student
+              creators, and make the most of campus life.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#events">Browse events</a>
+              <a class="button button-secondary" href="#create-event">
+                Post an event
+              </a>
+            </div>
+
+            <div class="hero-stats" aria-label="Campus Clash community statistics">
+              <div>
+                <strong>24+</strong>
+                <span>campus events</span>
+              </div>
+              <div>
+                <strong>8</strong>
+                <span>student communities</span>
+              </div>
+              <div>
+                <strong>1</strong>
+                <span>place to connect</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Campus Clash event highlights">
+            <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+            <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+
+            <article class="hero-card hero-card-main">
+              <span class="card-label">Next headline event</span>
+              <h2>Clash Night</h2>
+              <p>Music, performances, creative battles, and campus energy.</p>
+              <div class="hero-card-footer">
+                <span>SEP 05 · 20:00</span>
+                <span>Amphitheatre</span>
+              </div>
+            </article>
+
+            <article class="hero-card hero-card-small card-left">
+              <span>Open Mic</span>
+              <strong>AUG 12</strong>
+            </article>
+
+            <article class="hero-card hero-card-small card-right">
+              <span>Sport Clash</span>
+              <strong>AUG 20</strong>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="visual-wrap">
-          <div class="glow"></div>
-
-          <div class="character-card" id="characterCard">
-            <img
-              class="character-image"
-              id="characterImage"
-              src="assets/images/logo.png"
-              alt="Campus Clash artwork"
-            />
-
-            <div class="badge">
-              <span>Featured</span>
-              <strong>Culture. Energy. Competition.</strong>
+      <section class="section section-alt" id="events">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">What is happening</p>
+              <h2>Events worth showing up for.</h2>
             </div>
+
+            <p>
+              Browse the campus calendar, save events you like, and join the
+              moments that bring students together.
+            </p>
+          </div>
+
+          <div class="event-tools">
+            <label class="search-field">
+              <span class="sr-only">Search events</span>
+              <input
+                id="event-search"
+                type="search"
+                placeholder="Search events, locations, or categories"
+                autocomplete="off"
+              />
+            </label>
+
+            <select id="event-filter" aria-label="Filter events by category">
+              <option value="all">All categories</option>
+              <option value="music">Music</option>
+              <option value="sport">Sport</option>
+              <option value="creative">Creative</option>
+              <option value="social">Social</option>
+            </select>
+          </div>
+
+          <p class="results-count" id="results-count" aria-live="polite"></p>
+
+          <div class="events-grid" id="events-grid"></div>
+
+          <p class="empty-state" id="empty-state" hidden>
+            No events match that search. Try another word or category.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Simple by design</p>
+              <h2>Turn plans into memories.</h2>
+            </div>
+
+            <p>
+              Campus Clash helps students discover, share, and take part in
+              campus life without searching across countless group chats.
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <h3>Discover</h3>
+              <p>Search events by interest, location, date, or student community.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <h3>Save</h3>
+              <p>Keep your favourite events in one place so you do not miss them.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <h3>Show up</h3>
+              <p>Bring your friends, meet new people, and be part of the campus story.</p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section section-alt" id="about">
-      <div class="container">
-        <div class="section-heading">
-          <h2>More than an event. A campus movement.</h2>
+      <section class="section section-alt" id="saved">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Your plans</p>
+              <h2>Saved events.</h2>
+            </div>
 
-          <p>
-            Campus Clash gives students a space to compete, collaborate, create,
-            and shape the culture of their campus.
+            <p>
+              Events you save are stored only in this browser on this device.
+            </p>
+          </div>
+
+          <div class="saved-events" id="saved-events"></div>
+
+          <p class="empty-state" id="saved-empty-state">
+            You have not saved any events yet. Browse the calendar and tap
+            “Save event”.
           </p>
         </div>
+      </section>
 
-        <div class="card-grid">
-          <article class="info-card">
-            <span class="card-number">01 / COMPETE</span>
-            <h3>Bring your best</h3>
-            <p>
-              Participate in challenges, tournaments, showcases, and student-led
-              competitions.
-            </p>
-          </article>
-
-          <article class="info-card">
-            <span class="card-number">02 / CONNECT</span>
-            <h3>Find your people</h3>
-            <p>
-              Meet students, teams, creatives, and organizers from across campus.
-            </p>
-          </article>
-
-          <article class="info-card">
-            <span class="card-number">03 / CREATE</span>
-            <h3>Shape the culture</h3>
-            <p>
-              Build new experiences and help define the energy of your campus.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="events">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Upcoming moments</h2>
-
-          <p>
-            Update these cards with the real Campus Clash events, dates, venues,
-            and registration details.
-          </p>
-        </div>
-
-        <div class="events-grid">
-          <article class="event">
-            <div class="event-date">
-              <small>SEP</small>
-              <strong>14</strong>
-            </div>
-
-            <div>
-              <h3>Campus Clash Launch Night</h3>
-              <p>Main Hall · 18:00 · Music, meetups, and announcements</p>
-            </div>
-          </article>
-
-          <article class="event">
-            <div class="event-date">
-              <small>SEP</small>
-              <strong>21</strong>
-            </div>
-
-            <div>
-              <h3>Inter-Residence Challenge</h3>
-              <p>Sports Field · 12:00 · Teams, games, and prizes</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="join">
-      <div class="container">
-        <div class="join-panel">
+      <section class="section" id="create-event">
+        <div class="container form-layout">
           <div>
-            <h2>Your campus. Your culture. Your clash.</h2>
-
-            <p>
-              Join Campus Clash to attend events, represent your community, or
-              organize the next campus experience.
+            <p class="eyebrow">Student-led</p>
+            <h2 class="form-title">Put your event on the map.</h2>
+            <p class="form-copy">
+              Add an event to your local Campus Clash calendar. This demo stores
+              the event only in your browser until you connect a real backend.
             </p>
+
+            <div class="form-notice">
+              <strong>Demo mode</strong>
+              <span>No account, private information, payment details, or passwords are needed.</span>
+            </div>
           </div>
 
-          <a
-            class="button join-button"
-            href="mailto:your-email@example.com?subject=Campus%20Clash%20Registration"
-          >
-            Register now
-          </a>
+          <form class="event-form" id="event-form">
+            <div class="form-row">
+              <label>
+                Event name
+                <input
+                  type="text"
+                  name="title"
+                  maxlength="70"
+                  placeholder="e.g. Debate Society Showcase"
+                  required
+                />
+              </label>
+
+              <label>
+                Category
+                <select name="category" required>
+                  <option value="music">Music</option>
+                  <option value="sport">Sport</option>
+                  <option value="creative">Creative</option>
+                  <option value="social">Social</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Date
+                <input type="date" name="date" required />
+              </label>
+
+              <label>
+                Time
+                <input type="time" name="time" required />
+              </label>
+            </div>
+
+            <label>
+              Location
+              <input
+                type="text"
+                name="location"
+                maxlength="60"
+                placeholder="e.g. Innovation Hub"
+                required
+              />
+            </label>
+
+            <label>
+              Short description
+              <textarea
+                name="description"
+                rows="4"
+                maxlength="180"
+                placeholder="Tell students what they can expect."
+                required
+              ></textarea>
+            </label>
+
+            <button class="button button-primary" type="submit">
+              Add event to calendar
+            </button>
+
+            <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          </form>
         </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#home" aria-label="Campus Clash home">
+          <span class="brand-mark" aria-hidden="true">CC</span>
+          <span>Campus Clash</span>
+        </a>
+
+        <p>Built for campus culture.</p>
+        <p>© <span id="current-year"></span> Campus Clash</p>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Campus Clash. All rights reserved.</span>
-      <span>Built for campus culture.</span>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
+    </footer>
+  </body>
 </html>
