@@ -453,8 +453,32 @@ footer {
     right: 0;
     bottom: 1rem;
   }
+}
 
-  .footer-inner {
-    flex-direction: column;
-  }
+.image-fallback {
+  display: grid;
+  width: 100%;
+  min-height: 425px;
+  place-items: center;
+  padding: 2rem;
+  border-radius: 18px;
+  color: #15100a;
+  background: var(--accent);
+  text-align: center;
+}
+
+.image-fallback strong {
+  display: block;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.image-fallback span {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
