@@ -1,20 +1,23 @@
-# Campus-Clash
-Voting system for a dj competition 
 # Campus Clash
 
-A responsive landing page for Campus Clash, built with HTML, CSS, and JavaScript.
+Campus Clash is a responsive web landing page for student culture, campus events, competition, and community.
 
 ## Features
 
-- Responsive desktop and mobile layout
-- Fixed navigation bar
-- Smooth scrolling navigation
-- Scroll-based 3D image animation
-- Events section
-- Join and registration call-to-action
-- Image fallback if the project logo has not been uploaded
+- Responsive design for phones, tablets, and computers
+- Event highlights and calls to action
+- Smooth navigation between page sections
+- Image and visual asset support
+- Static hosting through GitHub Pages
 
-## Project structure
+## Built with
+
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
+
+## Repository structure
 
 ```text
 Campus-Clash/
@@ -22,7 +25,6 @@ Campus-Clash/
 ├── README.md
 ├── assets/
 │   └── images/
-│       └── logo.png
 ├── css/
 │   └── style.css
 └── js/
